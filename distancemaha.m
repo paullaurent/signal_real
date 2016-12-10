@@ -1,8 +1,8 @@
 function[tableau]=distancemaha(cov,moy,image1)
 var=imread(image1);
-var1=reshape(var(:,:,1),1,[])-moy(1);
-var2=reshape(var(:,:,2),1,[])-moy(2);
-var3=reshape(var(:,:,3),1,[])-moy(3);
+var1=reshape(double(var(:,:,1)),1,[])-moy(1);
+var2=reshape(double(var(:,:,2)),1,[])-moy(2);
+var3=reshape(double(var(:,:,3)),1,[])-moy(3);
 distancemoy=[var1;var2;var3];
 produit1=double(inv(cov))*double(distancemoy);
 produit2=double(distancemoy).*produit1;

@@ -2,10 +2,10 @@ function [barycentres,imageLabel]=trouverpicot(image)
 imageReconstruite=reconstruire(image);
 imageReconstruite=im2bw(imageReconstruite,0.5);%imagebinaire(noir et blanc)
 imageLabel=bwlabel(imageReconstruite); %image labélisée
-[x,y]=find(imageLabel==5);%récupère tous les points labélisés 1
-[x2,y2]=find(imageLabel==4);
-[x3,y3]=find(imageLabel==2);
-[x4,y4]=find(imageLabel==3);
+[x,y]=find(imageLabel==4);%récupère tous les points labélisés 1
+[x2,y2]=find(imageLabel==3);
+[x3,y3]=find(imageLabel==1);
+[x4,y4]=find(imageLabel==2);
 xb=mean(x); %barycentre des points 1
 yb=mean(y); 
 x2b=mean(x2);

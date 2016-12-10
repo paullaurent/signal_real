@@ -1,7 +1,5 @@
 % video='video.mp4';
 % decoupe_video(video);
-clear all;
-close all;
 image='images/1image.jpg';
 zone=zone_interet(image);
 moy=moyennes(zone);
